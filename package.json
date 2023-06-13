@@ -52,5 +52,6 @@
     "@slimplate/github": "latest",
     "@slimplate/utils": "latest"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": ["dist/**/*"]
 }
