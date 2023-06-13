@@ -1,0 +1,52 @@
+{
+  "name": "@slimplate/daisyui",
+  "version": "0.0.0",
+  "description": "Helper components for using slimplate with daisyui",
+  "keywords": [
+    "slimplate",
+    "cms",
+    "daisy",
+    "daisyui",
+    "tailwind",
+    "react"
+  ],
+  "contributors": [
+    {
+      "name": "David Konsumer",
+      "email": "konsumer@jetboystudio.com",
+      "url": "https://konsumer.js.org"
+    },
+    {
+      "name": "Brandon Berning",
+      "email": "berningbran9@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "vite build",
+    "start": "vite"
+  },
+  "main": "./dist/slimplate-daisyui.cjs",
+  "module": "./dist/slimplate-daisyui.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/slimplate-daisyui.mjs",
+      "require": "./dist/slimplate-daisyui.cjs"
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.3.9"
+  },
+  "peerDependencies": {
+    "@octokit/rest": "^19.0.11",
+    "@tabler/icons-react": "^2.22.0",
+    "react": "^18.2.0",
+    "classnames": "^2.3.2",
+    "dateformat": "^5.0.3",
+    "yaml": "^2.3.1",
+    "@slimplate/github": "latest",
+    "@slimplate/utils": "latest"
+  },
+  "dependencies": {}
+}

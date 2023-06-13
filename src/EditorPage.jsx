@@ -6,12 +6,10 @@ import { useLocalStorage, tt } from '@slimplate/utils'
 import Git from '@slimplate/github'
 import ButtonSync from './ButtonSync'
 import Form from './Form'
-import { useRouter } from 'next/router'
 import { StatusIndicator } from './indicators'
 
-export default memo(function EditorPage ({ status, onUpdate = () => {}, item, collection, repo, proxy, branch = 'main', children }) {
+export default memo(function EditorPage ({ status, onUpdate = () => {}, item, collection, repo, proxy, branch = 'main', children, onDelete = () => {} }) {
   const [user] = useLocalStorage('user', false)
-  const router = useRouter()
   const r = useRef()
 
   if (!user) {
@@ -52,7 +50,7 @@ export default memo(function EditorPage ({ status, onUpdate = () => {}, item, co
       if (git.updated) {
         await git.rm(item.filename)
         await git.commit('removed "' + item.filename + '.')
-        router.push(`/${collection.name}`)
+        onDelete(item, collection)
       }
     })
   }
