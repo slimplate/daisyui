@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "build": "vite build",
-    "start": "vite"
+    "prepublishOnly": "npm run build"
   },
   "main": "./dist/slimplate-daisyui.cjs",
   "module": "./dist/slimplate-daisyui.mjs",
